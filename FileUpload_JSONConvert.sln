@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUpload_JSONConvert", "FileUpload_JSONConvert\FileUpload_JSONConvert.csproj", "{EAF7CDC5-DCA1-4BA5-816E-8A504A916E9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAF7CDC5-DCA1-4BA5-816E-8A504A916E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF7CDC5-DCA1-4BA5-816E-8A504A916E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF7CDC5-DCA1-4BA5-816E-8A504A916E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF7CDC5-DCA1-4BA5-816E-8A504A916E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9FB7EE8-3942-459A-AC34-166D95941FAF}
+	EndGlobalSection
+EndGlobal
