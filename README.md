@@ -1,58 +1,63 @@
-# PDF to JSON Converter
+# pdftojson
 
-The PDF to JSON Converter is a web-based application designed to convert PDF documents into JSON format, facilitating easy extraction and analysis of PDF content in a structured form. This tool provides a user-friendly web interface for uploading PDF files, which are then processed server-side to generate JSON output containing the text along with basic metadata from the PDF documents.
+The pdftojson project is a comprehensive web-based application designed for converting PDF documents into JSON format. It caters to users needing to process or analyze the content of PDF documents in a structured and accessible format. Through a user-friendly web interface, it allows for the uploading of PDF files, which are then processed server-side to extract text and convert it into JSON, along with basic metadata.
 
 ## Overview
 
-The application is built using the ASP.NET Core framework on .NET 8.0, ensuring cross-platform compatibility. It incorporates a RESTful API for receiving PDF files via multipart/form-data. These files are processed using the iText7 library for PDF manipulation and the Newtonsoft.Json library for JSON serialization. The project also leverages Swashbuckle.AspNetCore for generating Swagger API documentation. The front end is developed using React, employing Material UI for the user interface design, providing a modern and responsive experience across various devices and browsers.
+Built using the ASP.NET Core framework on .NET 8.0, pdftojson is designed for cross-platform compatibility, ensuring it runs seamlessly on Windows, Linux, and macOS. The application's architecture revolves around a RESTful API that accepts PDF files via multipart/form-data, processes these files server-side by extracting text, and converts it to JSON format using iText7 for PDF processing and Newtonsoft.Json for JSON serialization. Swashbuckle.AspNetCore is utilized for API documentation, enhancing developer interaction and integration. The project also includes a React-based frontend, employing Material UI for a responsive and intuitive user interface.
 
 ## Features
 
-- **PDF File Upload**: Users can upload PDF files through a web interface. The application includes validation to confirm file formats before processing.
-- **PDF to JSON Conversion**: Extracts text from PDF files and converts it into JSON format, including document metadata.
-- **JSON Format Verification and Editing**: After conversion, users can verify the JSON format, make necessary edits, and prepare the data for further use.
-- **S3 Bucket Integration**: Allows users to upload the converted JSON directly to an AWS S3 bucket.
-- **API Documentation**: The application offers Swagger documentation for easy integration and usage of the API.
+- **PDF File Upload**: Users can upload PDF files, which are validated and processed by the server.
+- **PDF to JSON Conversion**: Extracted text from PDFs is converted into JSON format, including basic document metadata.
+- **JSON Response**: Users receive the JSON representation of the uploaded PDF, facilitating further processing or analysis.
+- **Frontend Interaction**: A React frontend with Material UI components offers a seamless user experience for uploading PDFs, viewing converted JSON, and managing uploads to AWS S3 buckets.
+- **API Documentation**: Automatically generated Swagger documentation simplifies understanding and utilizing the application's API.
+- **Error Handling**: Comprehensive error handling mechanisms ensure reliability and user feedback on issues such as upload failures or processing errors.
+- **Security and Performance**: Strict file validation, temporary secure storage for processed files, and optimizations for handling multiple uploads concurrently ensure both security and high performance.
 
-## Getting started
+## Getting Started
 
 ### Requirements
 
 - .NET 8.0 SDK
-- Node.js and npm (for React frontend development)
-- An AWS account (for S3 bucket integration)
+- Node.js (for running the React frontend)
+- An AWS account and an S3 bucket (for S3 upload functionality)
 
 ### Quickstart
 
 1. **Clone the repository**:
    ```
-   git clone <repository-url>
+   git clone https://github.com/your-repository/pdftojson.git
    ```
-2. **Install backend dependencies**:
-   Navigate to the project's root directory and restore the .NET dependencies:
+2. **Navigate to the project directory**:
+   ```
+   cd pdftojson
+   ```
+3. **Install backend dependencies**:
    ```
    dotnet restore
    ```
-3. **Run the backend**:
-   Still in the root directory, launch the ASP.NET Core application:
+4. **Start the ASP.NET Core backend**:
    ```
    dotnet run --project FileUpload_JSONConvert
    ```
-4. **Install frontend dependencies**:
-   Change to the `frontend` directory (assuming a standard structure) and install the required npm packages:
+5. **Navigate to the frontend directory**:
    ```
-   cd src/frontend
+   cd src
+   ```
+6. **Install frontend dependencies**:
+   ```
    npm install
    ```
-5. **Run the frontend**:
-   Start the React development server:
+7. **Start the React frontend**:
    ```
    npm start
    ```
-   The application should now be accessible at `http://localhost:3000`.
+   The application should now be running and accessible in your web browser.
 
 ### License
 
 Copyright (c) 2024.
 
-This software is proprietary and is not open source. Unauthorized copying of this file, via any medium, is strictly prohibited. Proprietary and confidential.
+All rights reserved. The pdftojson project is proprietary software, not open source. Unauthorized copying of files, via any medium, is strictly prohibited without the owner's permission.
